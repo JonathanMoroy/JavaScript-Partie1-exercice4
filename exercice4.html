@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercice_4</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <form>
+    <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+    <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+    <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+    <button  name="valider" id="valider" onclick="validate();">Valider</button>
+  </form>
+  <script>
+  function validate(){
+    var nom = document.getElementById("nom").value;
+    var prenom = document.getElementById("prenom").value;
+    var ville = document.getElementById("ville").value;
+
+    if (nom && prenom && ville) {
+      alert('Nom : ' + nom + '\n' + 'Prénom : ' + prenom + '\n' + 'Ville : ' + ville);
+    } else {
+      alert('Attention, un des champs est vide !');
+    }
+  }
+  </script>
+</body>
+</html>
